@@ -1,21 +1,26 @@
-Filled container.
+Container filled.
 Container contains 4 elements.
 
 0:
 [Aphorism]: Text
 [Author]: Author
+[Mark]: 4
 
 1:
 [Saying]: Sometextagain
 [Country]: Country
+[Mark]: 3
 
 2:
 [Aphorism]: Onemoretime
 [Author]: Author2
+[Mark]: 7
 
 3:
 [Saying]: Thatsall
 [Country]: Country2
+[Mark]: 3
 
-Empty container. 
+Container cleared.
 Container contains 0 elements.
+
