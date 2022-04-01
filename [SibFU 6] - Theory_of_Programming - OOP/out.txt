@@ -1,5 +1,5 @@
 Container filled and sorted.
-Container contains 4 elements.
+Container contains 6 elements.
 
 0:
 [Aphorism]: One,more.time??
@@ -25,6 +25,18 @@ Container contains 4 elements.
 [Punctuation]: 0
 [Mark]: 4
 
+4:
+[Saying]: Thatsall
+[Country]: Country2
+[Punctuation]: 0
+[Mark]: 3
+
+5:
+[Riddle]: answer
+[Answer]: 10
+[Punctuation]: 0
+[Mark]: -842150451
+
 0:
 1:
 [Saying]: Thatsall!!!
@@ -39,6 +51,13 @@ Container contains 4 elements.
 [Mark]: 3
 
 3:
+4:
+[Saying]: Thatsall
+[Country]: Country2
+[Punctuation]: 0
+[Mark]: 3
+
+5:
 Container cleared.
 Container contains 0 elements.
 
