@@ -128,7 +128,7 @@ void Aphorism::inData(ifstream& ifst) {
 void Aphorism::outData(string text, int mark, ofstream& ofst) {
 	ofst << "[Aphorism]: " << text << endl;
 	ofst << "[Author]: " << author << endl;
-	ofst << "[Punctuation]: " << textCounter() << endl << endl;
+	ofst << "[Punctuation]: " << textCounter() << endl;
 	ofst << "[Mark]: " << mark << endl << endl;
 }
 
@@ -139,6 +139,6 @@ void Saying::inData(ifstream& ifst) {
 void Saying::outData(string text, int mark, ofstream& ofst) {
 	ofst << "[Saying]: " << text << endl;
 	ofst << "[Country]: " << country << endl;
-	ofst << "[Punctuation]: " << textCounter() << endl << endl;
+	ofst << "[Punctuation]: " << textCounter() << endl;
 	ofst << "[Mark]: " << mark << endl << endl;
 }
