@@ -11,6 +11,7 @@ class Text {
     string text;
 public:
     string getText();
+    int textCounter();
     static Text* inText(ifstream& ifst);
     virtual void inData(ifstream& ifst) = 0;
     virtual void outData(string text, ofstream& ofst) = 0;
