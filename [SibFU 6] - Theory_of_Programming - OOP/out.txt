@@ -1,5 +1,5 @@
-Filled container.
-Container contains 4 elements.
+Container filled.
+Container contains 5 elements.
 
 0:
 [Aphorism]: Text
@@ -17,5 +17,10 @@ Container contains 4 elements.
 [Saying]: Thatsall
 [Country]: Country2
 
-Empty container. 
+4:
+[Saying]: Simpleriddle
+[Answer]: answer
+
+Container cleared.
 Container contains 0 elements.
+

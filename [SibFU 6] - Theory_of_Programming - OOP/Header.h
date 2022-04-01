@@ -34,6 +34,14 @@ public:
     Saying() {};
 };
 
+class Riddle : public Text {
+    string answer;
+public:
+    void inData(ifstream& ifst);
+    void outData(string text, ofstream& ofst);
+    Riddle() {};
+};
+
 struct Node {
     Node *next, *prev;
     Text* current;

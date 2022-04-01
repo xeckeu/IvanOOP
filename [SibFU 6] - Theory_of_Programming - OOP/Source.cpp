@@ -74,6 +74,10 @@ Text* Text::inText(ifstream& ifst) {
 		C = new Saying;
 		ifst >> C->text;
 	}
+	else if (K == 3) {
+		C = new Riddle;
+		ifst >> C->text;
+	}
 	else {
 		return 0;
 	}
@@ -101,4 +105,13 @@ void Saying::inData(ifstream& ifst) {
 void Saying::outData(string text, ofstream& ofst) {
 	ofst << "[Saying]: " << text << endl;
 	ofst << "[Country]: " << country << endl << endl;
+}
+
+void Riddle::inData(ifstream& ifst) {
+	ifst >> answer;
+}
+
+void Riddle::outData(string text, ofstream& ofst) {
+	ofst << "[Riddle]: " << text << endl;
+	ofst << "[Answer]: " << answer << endl << endl;
 }
