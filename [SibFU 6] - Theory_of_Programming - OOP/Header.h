@@ -14,6 +14,7 @@ public:
     static Text* inText(ifstream& ifst);
     virtual void inData(ifstream& ifst) = 0;
     virtual void outData(string text, ofstream& ofst) = 0;
+    virtual void outFilter(string text, ofstream& ofst) = 0;
 protected:
     Text() {};
 };
@@ -23,6 +24,7 @@ class Aphorism : public Text {
 public:
     void inData(ifstream& ifst);
     void outData(string text, ofstream& ofst);
+    void outFilter(string text, ofstream& ofst);
     Aphorism() {};
 };
 
@@ -31,6 +33,7 @@ class Saying : public Text {
 public:
     void inData(ifstream& ifst);
     void outData(string text, ofstream& ofst);
+    void outFilter(string text, ofstream& ofst);
     Saying() {};
 };
 
@@ -46,6 +49,7 @@ public:
     void in(ifstream& ifst);
     void out(ofstream& ofst);
     void clear();
+    void outFilter(ofstream& ofst);
     Container();
     ~Container() {
         clear(); 

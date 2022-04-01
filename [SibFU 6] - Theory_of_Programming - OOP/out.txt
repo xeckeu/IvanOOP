@@ -1,4 +1,4 @@
-Filled container.
+Container filled.
 Container contains 4 elements.
 
 0:
@@ -17,5 +17,16 @@ Container contains 4 elements.
 [Saying]: Thatsall
 [Country]: Country2
 
-Empty container. 
+0:
+1:
+[Saying]: Sometextagain
+[Country]: Country
+
+2:
+3:
+[Saying]: Thatsall
+[Country]: Country2
+
+Container cleared.
 Container contains 0 elements.
+

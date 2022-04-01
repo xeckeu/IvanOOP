@@ -62,6 +62,17 @@ void Container::clear() {
 	length = 0;
 }
 
+void Container::outFilter(ofstream& ofst) {
+	Node* temp = head;
+	for (int i = 0; i < length; i++) {
+		ofst << i << ":\n";
+		temp->current->outFilter(temp->current->getText(), ofst);
+		if (temp->next) {
+			temp = temp->next;
+		}
+	}
+}
+
 Text* Text::inText(ifstream& ifst) {
 	Text* C;
 	int K;
@@ -94,11 +105,20 @@ void Aphorism::outData(string text, ofstream& ofst) {
 	ofst << "[Author]: " << author << endl << endl;
 }
 
+void Aphorism::outFilter(string text, ofstream& ofst) {
+	ofst << "";
+}
+
 void Saying::inData(ifstream& ifst) {
 	ifst >> country;
 }
 
 void Saying::outData(string text, ofstream& ofst) {
+	ofst << "[Saying]: " << text << endl;
+	ofst << "[Country]: " << country << endl << endl;
+}
+
+void Saying::outFilter(string text, ofstream& ofst) {
 	ofst << "[Saying]: " << text << endl;
 	ofst << "[Country]: " << country << endl << endl;
 }
