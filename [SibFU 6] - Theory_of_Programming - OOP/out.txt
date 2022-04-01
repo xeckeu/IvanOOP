@@ -1,37 +1,44 @@
-Container filled.
+Container filled and sorted.
 Container contains 4 elements.
 
 0:
-[Aphorism]: Text
-[Author]: Author
-[Mark]: 4
 [Aphorism]: One,more.time??
 [Author]: Author2
 [Punctuation]: 4
+[Mark]: 7
 
 1:
 [Saying]: Thatsall!!!
 [Country]: Country2
 [Punctuation]: 3
-[Saying]: Sometextagain
-[Country]: Country
 [Mark]: 3
 
 2:
-[Aphorism]: Onemoretime
-[Author]: Author2
-[Mark]: 7
 [Saying]: Some-text-again
 [Country]: Country
 [Punctuation]: 2
+[Mark]: 3
 
 3:
-[Saying]: Thatsall
-[Country]: Country2
-[Mark]: 3
 [Aphorism]: Text
 [Author]: Author.
 [Punctuation]: 0
+[Mark]: 4
 
-Empty container. 
+0:
+1:
+[Saying]: Thatsall!!!
+[Country]: Country2
+[Punctuation]: 3
+[Mark]: 3
+
+2:
+[Saying]: Some-text-again
+[Country]: Country
+[Punctuation]: 2
+[Mark]: 3
+
+3:
+Container cleared.
 Container contains 0 elements.
+

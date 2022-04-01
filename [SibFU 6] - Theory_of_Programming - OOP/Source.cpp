@@ -86,7 +86,7 @@ void Container::outFilter(ofstream& ofst) {
 	Node* temp = head;
 	for (int i = 0; i < length; i++) {
 		ofst << i << ":\n";
-		temp->current->outFilter(temp->current->getText(), ofst);
+		temp->current->outFilter(temp->current->getText(), temp->current->getMark(), ofst);
 		if (temp->next) {
 			temp = temp->next;
 		}
@@ -143,7 +143,7 @@ void Aphorism::outData(string text, int mark, ofstream& ofst) {
 	ofst << "[Mark]: " << mark << endl << endl;
 }
 
-void Aphorism::outFilter(string text, ofstream& ofst) {
+void Aphorism::outFilter(string text, int mark, ofstream& ofst) {
 	ofst << "";
 }
 
@@ -158,7 +158,7 @@ void Saying::outData(string text, int mark, ofstream& ofst) {
 	ofst << "[Mark]: " << mark << endl << endl;
 }
 
-void Saying::outFilter(string text, ofstream& ofst) {
+void Saying::outFilter(string text, int mark, ofstream& ofst) {
 	ofst << "[Saying]: " << text << endl;
 	ofst << "[Country]: " << country << endl;
 	ofst << "[Punctuation]: " << textCounter() << endl;

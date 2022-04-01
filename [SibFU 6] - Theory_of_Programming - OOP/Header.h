@@ -17,7 +17,7 @@ public:
     int getMark();
     static Text* inText(ifstream& ifst);
     virtual void inData(ifstream& ifst) = 0;
-    virtual void outFilter(string text, ofstream& ofst) = 0;
+    virtual void outFilter(string text, int mark, ofstream& ofst) = 0;
     virtual void outData(string text, int mark, ofstream& ofst) = 0;
 protected:
     Text() {};
@@ -27,7 +27,7 @@ class Aphorism : public Text {
     string author;
 public:
     void inData(ifstream& ifst);
-    void outFilter(string text, ofstream& ofst);
+    void outFilter(string text, int mark, ofstream& ofst);
     void outData(string text, int mark, ofstream& ofst);
     Aphorism() {};
 };
@@ -36,7 +36,7 @@ class Saying : public Text {
     string country;
 public:
     void inData(ifstream& ifst);
-    void outFilter(string text, ofstream& ofst);
+    void outFilter(string text, int mark, ofstream& ofst);
     void outData(string text, int mark, ofstream& ofst);
     Saying() {};
 };
