@@ -45,7 +45,8 @@ class Riddle : public Text {
     string answer;
 public:
     void inData(ifstream& ifst);
-    void outData(string text, ofstream& ofst);
+    void outFilter(string text, int mark, ofstream& ofst);
+    void outData(string text, int mark, ofstream& ofst);
     Riddle() {};
 };
 

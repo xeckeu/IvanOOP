@@ -173,11 +173,13 @@ void Riddle::inData(ifstream& ifst) {
 	ifst >> answer;
 }
 
-void Riddle::outData(string text, int mark ofstream& ofst) {
+void Riddle::outData(string text, int mark, ofstream& ofst) {
 	ofst << "[Riddle]: " << text << endl;
-	ofst << "[Answer]: " << answer << endl << endl;
+	ofst << "[Answer]: " << answer << endl;
 	ofst << "[Punctuation]: " << textCounter() << endl;
 	ofst << "[Mark]: " << mark << endl << endl;
 }
-	
+
+void Riddle::outFilter(string text, int mark, ofstream& ofst) {
+	ofst << "";
 }
