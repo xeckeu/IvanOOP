@@ -1,4 +1,4 @@
-Container filled and sorted.
+Container filled.
 Container contains 4 elements.
 
 0:
@@ -33,6 +33,5 @@ Container contains 4 elements.
 [Author]: Author.
 [Punctuation]: 0
 
-Container cleared.
+Empty container. 
 Container contains 0 elements.
-
