@@ -12,6 +12,8 @@ class Text {
     int mark;
 public:
     string getText();
+    int textCounter();
+    bool Compare(Text* T);
     int getMark();
     static Text* inText(ifstream& ifst);
     virtual void inData(ifstream& ifst) = 0;
@@ -48,6 +50,7 @@ public:
     void in(ifstream& ifst);
     void out(ofstream& ofst);
     void clear();
+    void sort();
     Container();
     ~Container() {
         clear(); 

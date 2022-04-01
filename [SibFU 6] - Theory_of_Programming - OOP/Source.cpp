@@ -62,6 +62,26 @@ void Container::clear() {
 	length = 0;
 }
 
+void Container::sort() {
+	if (length > 1) {
+		Node* first = head;
+		Node* second = head->next;
+		Node* temp = new Node;
+		for (int i = 0; i < length - 1; i++) {
+			for (int j = 0; j < length - i - 1; j++) {
+				if (first->current->Compare(second->current)) {
+					temp->current = first->current;
+					first->current = second->current;
+					second->current = temp->current;
+				}
+				second = second->next;
+			}
+			first = first->next;
+			second = first->next;
+		}
+	}
+}
+
 Text* Text::inText(ifstream& ifst) {
 	Text* C;
 	int K;
@@ -85,6 +105,18 @@ string Text::getText() {
 	return text;
 }
 
+int Text::textCounter() {
+	int counter = 0;
+	string punctuationMarks = ".,?!:;-";
+	for (auto m : punctuationMarks)
+		counter += count(this->text.begin(), this->text.end(), m);
+	return counter;
+}
+
+bool Text::Compare(Text* T) {
+	return textCounter() < T->textCounter();
+}
+
 int Text::getMark() {
 	return mark;
 }
@@ -96,6 +128,7 @@ void Aphorism::inData(ifstream& ifst) {
 void Aphorism::outData(string text, int mark, ofstream& ofst) {
 	ofst << "[Aphorism]: " << text << endl;
 	ofst << "[Author]: " << author << endl;
+	ofst << "[Punctuation]: " << textCounter() << endl << endl;
 	ofst << "[Mark]: " << mark << endl << endl;
 }
 
@@ -106,5 +139,6 @@ void Saying::inData(ifstream& ifst) {
 void Saying::outData(string text, int mark, ofstream& ofst) {
 	ofst << "[Saying]: " << text << endl;
 	ofst << "[Country]: " << country << endl;
+	ofst << "[Punctuation]: " << textCounter() << endl << endl;
 	ofst << "[Mark]: " << mark << endl << endl;
 }
