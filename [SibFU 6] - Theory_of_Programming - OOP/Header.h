@@ -12,6 +12,7 @@ class Text {
 public:
     string getText();
     int textCounter();
+    bool Compare(Text* T);
     static Text* inText(ifstream& ifst);
     virtual void inData(ifstream& ifst) = 0;
     virtual void outData(string text, ofstream& ofst) = 0;
@@ -47,6 +48,7 @@ public:
     void in(ifstream& ifst);
     void out(ofstream& ofst);
     void clear();
+    void sort();
     Container();
     ~Container() {
         clear(); 

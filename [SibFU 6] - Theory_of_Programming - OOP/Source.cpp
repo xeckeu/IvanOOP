@@ -63,6 +63,26 @@ void Container::clear() {
 	length = 0;
 }
 
+void Container::sort() {
+	if (length > 1) {
+		Node* first = head;
+		Node* second = head->next;
+		Node* temp = new Node;
+		for (int i = 0; i < length - 1; i++) {
+			for (int j = 0; j < length - i - 1; j++) {
+				if (first->current->Compare(second->current)) {
+					temp->current = first->current;
+					first->current = second->current;
+					second->current = temp->current;
+				}
+				second = second->next;
+			}
+			first = first->next;
+			second = first->next;
+		}
+	}
+}
+
 Text* Text::inText(ifstream& ifst) {
 	Text* C;
 	int K;
@@ -92,6 +112,10 @@ int Text::textCounter() {
 	for (auto m : punctuationMarks)
 		counter += count(this->text.begin(), this->text.end(), m);
 	return counter;
+}
+
+bool Text::Compare(Text* T) {
+	return textCounter() < T->textCounter();
 }
 
 void Aphorism::inData(ifstream& ifst) {

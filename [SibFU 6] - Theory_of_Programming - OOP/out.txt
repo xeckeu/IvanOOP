@@ -1,25 +1,25 @@
-Container filled.
+Container filled and sorted.
 Container contains 4 elements.
 
 0:
-[Aphorism]: Text
-[Author]: Author.
-[Punctuation]: 0
-
-1:
-[Saying]: Some-text-again
-[Country]: Country
-[Punctuation]: 2
-
-2:
 [Aphorism]: One,more.time??
 [Author]: Author2
 [Punctuation]: 4
 
-3:
+1:
 [Saying]: Thatsall!!!
 [Country]: Country2
 [Punctuation]: 3
+
+2:
+[Saying]: Some-text-again
+[Country]: Country
+[Punctuation]: 2
+
+3:
+[Aphorism]: Text
+[Author]: Author.
+[Punctuation]: 0
 
 Container cleared.
 Container contains 0 elements.
