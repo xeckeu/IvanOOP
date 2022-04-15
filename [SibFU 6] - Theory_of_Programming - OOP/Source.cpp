@@ -105,7 +105,6 @@ Text* Text::inText(ifstream& ifst) {
 	}
 	else if (K == 3) {
 		C = new Riddle;
-		ifst >> C->text;
 	}
 	else {
 		return 0;

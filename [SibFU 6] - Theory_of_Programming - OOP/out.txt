@@ -1,4 +1,43 @@
-Container filled and sorted.
+Container filled.
+Container contains 6 elements.
+
+0:
+[Aphorism]: Text
+[Author]: Author.
+[Punctuation]: 0
+[Mark]: 4
+
+1:
+[Saying]: Some-text-again
+[Country]: Country
+[Punctuation]: 2
+[Mark]: 3
+
+2:
+[Aphorism]: One,more.time??
+[Author]: Author2
+[Punctuation]: 4
+[Mark]: 7
+
+3:
+[Saying]: Thatsall!!!
+[Country]: Country2
+[Punctuation]: 3
+[Mark]: 3
+
+4:
+[Saying]: Thatsall
+[Country]: Country2
+[Punctuation]: 0
+[Mark]: 3
+
+5:
+[Riddle]: Simpleriddle
+[Answer]: answer
+[Punctuation]: 0
+[Mark]: 10
+
+Container sorted.
 Container contains 6 elements.
 
 0:
@@ -32,10 +71,10 @@ Container contains 6 elements.
 [Mark]: 3
 
 5:
-[Riddle]: answer
-[Answer]: 10
+[Riddle]: Simpleriddle
+[Answer]: answer
 [Punctuation]: 0
-[Mark]: -842150451
+[Mark]: 10
 
 0:
 1:

@@ -11,9 +11,12 @@ int main(int argc, char* argv[]) {
     Container C;
 
     C.in(ifst);
+    ofst << "Container filled." << endl;
+    cout << "Container filled." << endl;
+    C.out(ofst);
     C.sort();
-    ofst << "Container filled and sorted." << endl;
-    cout << "Container filled and sorted." << endl;
+    ofst << "Container sorted." << endl;
+    cout << "Container sorted." << endl;
     C.out(ofst);
     C.outFilter(ofst);
     C.clear();
