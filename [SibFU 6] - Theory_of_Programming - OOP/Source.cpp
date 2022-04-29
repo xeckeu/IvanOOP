@@ -119,20 +119,30 @@ string Text::getText() {
 	return text;
 }
 
-int Text::textCounter() {
+int Text::textCounter(string text) {
 	int counter = 0;
-	string punctuationMarks = ".,?!:;-";
+	string punctuationMarks = ".,?!:;-_";
 	for (auto m : punctuationMarks)
-		counter += count(this->text.begin(), this->text.end(), m);
+		counter += count(text.begin(), text.end(), m);
 	return counter;
 }
 
 bool Text::Compare(Text* T) {
-	return textCounter() < T->textCounter();
+	return textCounter(text) < T->textCounter(T->text);
 }
 
 int Text::getMark() {
 	return mark;
+}
+
+string Aphorism::getAuthor()
+{
+	return string(author);
+}
+
+void Aphorism::setAuthor(string author)
+{
+	this->author = author;
 }
 
 void Aphorism::inData(ifstream& ifst) {
@@ -142,12 +152,22 @@ void Aphorism::inData(ifstream& ifst) {
 void Aphorism::outData(string text, int mark, ofstream& ofst) {
 	ofst << "[Aphorism]: " << text << endl;
 	ofst << "[Author]: " << author << endl;
-	ofst << "[Punctuation]: " << textCounter() << endl;
+	ofst << "[Punctuation]: " << textCounter(text) << endl;
 	ofst << "[Mark]: " << mark << endl << endl;
 }
 
 void Aphorism::outFilter(string text, int mark, ofstream& ofst) {
 	ofst << "";
+}
+
+string Saying::getCountry()
+{
+	return string(country);
+}
+
+void Saying::setCountry(string country)
+{
+	this->country = country;
 }
 
 void Saying::inData(ifstream& ifst) {
@@ -157,15 +177,25 @@ void Saying::inData(ifstream& ifst) {
 void Saying::outData(string text, int mark, ofstream& ofst) {
 	ofst << "[Saying]: " << text << endl;
 	ofst << "[Country]: " << country << endl;
-	ofst << "[Punctuation]: " << textCounter() << endl;
+	ofst << "[Punctuation]: " << textCounter(text) << endl;
 	ofst << "[Mark]: " << mark << endl << endl;
 }
 
 void Saying::outFilter(string text, int mark, ofstream& ofst) {
 	ofst << "[Saying]: " << text << endl;
 	ofst << "[Country]: " << country << endl;
-	ofst << "[Punctuation]: " << textCounter() << endl;
+	ofst << "[Punctuation]: " << textCounter(text) << endl;
 	ofst << "[Mark]: " << mark << endl << endl;
+}
+
+string Riddle::getAnswer()
+{
+	return string(answer);
+}
+
+void Riddle::setAnswer(string answer)
+{
+	this->answer = answer;
 }
 
 void Riddle::inData(ifstream& ifst) {
@@ -175,7 +205,7 @@ void Riddle::inData(ifstream& ifst) {
 void Riddle::outData(string text, int mark, ofstream& ofst) {
 	ofst << "[Riddle]: " << text << endl;
 	ofst << "[Answer]: " << answer << endl;
-	ofst << "[Punctuation]: " << textCounter() << endl;
+	ofst << "[Punctuation]: " << textCounter(text) << endl;
 	ofst << "[Mark]: " << mark << endl << endl;
 }
 

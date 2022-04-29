@@ -12,7 +12,7 @@ class Text {
     int mark = 0;
 public:
     string getText();
-    int textCounter();
+    int textCounter(string text);
     bool Compare(Text* T);
     int getMark();
     static Text* inText(ifstream& ifst);
@@ -26,6 +26,8 @@ protected:
 class Aphorism : public Text {
     string author;
 public:
+    string getAuthor();
+    void setAuthor(string author);
     void inData(ifstream& ifst);
     void outFilter(string text, int mark, ofstream& ofst);
     void outData(string text, int mark, ofstream& ofst);
@@ -35,6 +37,8 @@ public:
 class Saying : public Text {
     string country;
 public:
+    string getCountry();
+    void setCountry(string country);
     void inData(ifstream& ifst);
     void outFilter(string text, int mark, ofstream& ofst);
     void outData(string text, int mark, ofstream& ofst);
@@ -44,6 +48,8 @@ public:
 class Riddle : public Text {
     string answer;
 public:
+    string getAnswer();
+    void setAnswer(string answer);
     void inData(ifstream& ifst);
     void outFilter(string text, int mark, ofstream& ofst);
     void outData(string text, int mark, ofstream& ofst);
