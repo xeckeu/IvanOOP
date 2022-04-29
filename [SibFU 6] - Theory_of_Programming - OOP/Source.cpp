@@ -139,6 +139,11 @@ Text* Text::inText(ifstream& ifst) {
 		mark = atoi(temp.c_str());
 		if ((mark >= 0) && (mark <= 10))
 			C->mark = mark;
+		else
+		{
+			cout << "[Mark] Invalid input data!" << endl << endl;
+			exit(1);
+		}
 	}
 	else {
 		cout << "Invalid input data!" << endl << endl;

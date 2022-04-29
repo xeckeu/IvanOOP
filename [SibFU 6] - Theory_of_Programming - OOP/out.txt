@@ -41,7 +41,7 @@ Container contains 7 elements.
 [Saying]: Proverb
 [Country]: Thibet
 [Punctuation]: 0
-[Mark]: 9
+[Mark]: 3
 
 Container sorted.
 Container contains 7 elements.
@@ -86,7 +86,7 @@ Container contains 7 elements.
 [Saying]: Proverb
 [Country]: Thibet
 [Punctuation]: 0
-[Mark]: 9
+[Mark]: 3
 
 0:
 1:
@@ -108,7 +108,7 @@ Container contains 7 elements.
 [Saying]: Proverb
 [Country]: Thibet
 [Punctuation]: 0
-[Mark]: 9
+[Mark]: 3
 
 Container cleared.
 Container contains 0 elements.
