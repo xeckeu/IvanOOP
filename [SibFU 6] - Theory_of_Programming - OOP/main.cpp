@@ -12,6 +12,12 @@ int main(int argc, char* argv[]) {
         system("pause");
         return 1;
     }
+    if (ifst.peek() == std::ifstream::traits_type::eof())
+    {
+        cout << "File is empty!" << endl << endl;
+        system("pause");
+        return 1;
+    }
     ofstream ofst(argv[2]);
     if (!ofst.is_open()) {
         cout << "No output file found or could not open!" << endl;

@@ -112,6 +112,7 @@ Text* Text::inText(ifstream& ifst) {
 		}
 		else {
 			cout << "Invalid input data!" << endl << endl;
+			system("pause");
 			exit(1);
 		}
 	}
@@ -142,11 +143,13 @@ Text* Text::inText(ifstream& ifst) {
 		else
 		{
 			cout << "[Mark] Invalid input data!" << endl << endl;
+			system("pause");
 			exit(1);
 		}
 	}
 	else {
 		cout << "Invalid input data!" << endl << endl;
+		system("pause");
 		exit(1);
 	}
 	return C;
@@ -193,6 +196,7 @@ void Aphorism::inData(ifstream& ifst) {
 				if (c != ' ' && c != '-' && c != ',' && c != '.')
 				{
 					cout << "[Aphorism] Invalid Data!" << endl << endl;
+					system("pause");
 					exit(1);
 				}
 			}
@@ -235,6 +239,7 @@ void Saying::inData(ifstream& ifst) {
 				if (c != ' ' && c != '-' && c != ',' && c != '.')
 				{
 					cout << "[Saying] Invalid Data!" << endl << endl;
+					system("pause");
 					exit(1);
 				}
 			}
@@ -280,6 +285,7 @@ void Riddle::inData(ifstream& ifst) {
 				if (c != ' ' && c != '-' && c != ',' && c != '.')
 				{
 					cout << "[Riddle] Invalid Data!" << endl << endl;
+					system("pause");
 					exit(1);
 				}
 			}
