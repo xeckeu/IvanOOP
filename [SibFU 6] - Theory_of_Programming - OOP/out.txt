@@ -1,102 +1,128 @@
 Container filled.
-Container contains 6 elements.
+Container contains 8 elements.
 
 0:
-[Aphorism]: Text
-[Author]: Author.
-[Punctuation]: 0
-[Mark]: 4
+[Aphorism]: Te.,xt
+[Author]: Author
+[Punctuation]: 2
+[Mark]: 8
 
 1:
-[Saying]: Some-text-again
+[Saying]: Some.text.again
 [Country]: Country
 [Punctuation]: 2
 [Mark]: 3
 
 2:
-[Aphorism]: One,more.time??
+[Aphorism]: One-more-time?
 [Author]: Author2
-[Punctuation]: 4
-[Mark]: 7
+[Punctuation]: 3
+[Mark]: 2
 
 3:
-[Saying]: Thatsall!!!
-[Country]: Country2
-[Punctuation]: 3
-[Mark]: 3
-
-4:
 [Saying]: Thatsall
 [Country]: Country2
 [Punctuation]: 0
 [Mark]: 3
 
+4:
+[Riddle]: AnyRiddle!!!
+[Answer]: itAnswer
+[Punctuation]: 3
+[Mark]: 4
+
 5:
-[Riddle]: Simpleriddle
-[Answer]: answer
+[Aphorism]: Aphir
+[Author]: Oushkin
 [Punctuation]: 0
 [Mark]: 10
+
+6:
+[Saying]: Proverb
+[Country]: Thibet
+[Punctuation]: 0
+[Mark]: 7
+
+7:
+[Riddle]: ???
+[Answer]: !!!
+[Punctuation]: 3
+[Mark]: 5
 
 Container sorted.
-Container contains 6 elements.
+Container contains 8 elements.
 
 0:
-[Aphorism]: One,more.time??
+[Aphorism]: One-more-time?
 [Author]: Author2
-[Punctuation]: 4
-[Mark]: 7
+[Punctuation]: 3
+[Mark]: 2
 
 1:
-[Saying]: Thatsall!!!
-[Country]: Country2
+[Riddle]: AnyRiddle!!!
+[Answer]: itAnswer
 [Punctuation]: 3
-[Mark]: 3
+[Mark]: 4
 
 2:
-[Saying]: Some-text-again
+[Riddle]: ???
+[Answer]: !!!
+[Punctuation]: 3
+[Mark]: 5
+
+3:
+[Saying]: Some.text.again
 [Country]: Country
 [Punctuation]: 2
 [Mark]: 3
 
-3:
-[Aphorism]: Text
-[Author]: Author.
-[Punctuation]: 0
-[Mark]: 4
-
 4:
-[Saying]: Thatsall
-[Country]: Country2
-[Punctuation]: 0
-[Mark]: 3
+[Aphorism]: Te.,xt
+[Author]: Author
+[Punctuation]: 2
+[Mark]: 8
 
 5:
-[Riddle]: Simpleriddle
-[Answer]: answer
+[Aphorism]: Aphir
+[Author]: Oushkin
 [Punctuation]: 0
 [Mark]: 10
 
-0:
-1:
-[Saying]: Thatsall!!!
-[Country]: Country2
-[Punctuation]: 3
-[Mark]: 3
+6:
+[Saying]: Proverb
+[Country]: Thibet
+[Punctuation]: 0
+[Mark]: 7
 
-2:
-[Saying]: Some-text-again
-[Country]: Country
-[Punctuation]: 2
-[Mark]: 3
-
-3:
-4:
+7:
 [Saying]: Thatsall
 [Country]: Country2
 [Punctuation]: 0
 [Mark]: 3
 
+0:
+1:
+2:
+3:
+[Saying]: Some.text.again
+[Country]: Country
+[Punctuation]: 2
+[Mark]: 3
+
+4:
 5:
+6:
+[Saying]: Proverb
+[Country]: Thibet
+[Punctuation]: 0
+[Mark]: 7
+
+7:
+[Saying]: Thatsall
+[Country]: Country2
+[Punctuation]: 0
+[Mark]: 3
+
 Container cleared.
 Container contains 0 elements.
 
