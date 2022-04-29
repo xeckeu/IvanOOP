@@ -9,7 +9,7 @@ using namespace std;
 
 class Text {
     string text;
-    int mark = 0;
+    int mark;
 public:
     string getText();
     int textCounter(string text);

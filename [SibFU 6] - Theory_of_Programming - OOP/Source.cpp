@@ -37,11 +37,14 @@ void Container::in(ifstream& ifst) {
 
 void Container::out(ofstream& ofst) {
 	ofst << "Container contains " << length
-		 << " elements." << endl << endl;
+		<< " elements." << endl << endl;
 	Node* temp = head;
 	for (int i = 0; i < length; i++) {
 		ofst << i << ":\n";
-		temp->current->outData(temp->current->getText(), temp->current->getMark(), ofst);
+		if ((!temp->current->getText().empty()) && (temp->current->getMark()))
+			temp->current->outData(temp->current->getText(), temp->current->getMark(), ofst);
+		else
+			ofst << "Invalid element!" << endl << endl;
 		if (temp->next) {
 			temp = temp->next;
 		}
@@ -86,7 +89,10 @@ void Container::outFilter(ofstream& ofst) {
 	Node* temp = head;
 	for (int i = 0; i < length; i++) {
 		ofst << i << ":\n";
-		temp->current->outFilter(temp->current->getText(), temp->current->getMark(), ofst);
+		if ((!temp->current->getText().empty()) && (temp->current->getMark()))
+			temp->current->outFilter(temp->current->getText(), temp->current->getMark(), ofst);
+		else
+			ofst << "Invalid element!" << endl << endl;
 		if (temp->next) {
 			temp = temp->next;
 		}
@@ -95,8 +101,23 @@ void Container::outFilter(ofstream& ofst) {
 
 Text* Text::inText(ifstream& ifst) {
 	Text* C;
-	int K;
-	ifst >> K;
+	string nums = "9876543210";
+	string temp = "";
+	int mark = -1;
+	int K = -1;
+	getline(ifst, temp);
+	if ((temp != "1") && (temp != "2") && (temp != "3")) {
+		if (ifst.peek() == EOF) {
+			return 0;
+		}
+		else {
+			cout << "Invalid input data!" << endl << endl;
+			exit(1);
+		}
+	}
+	else
+		K = atoi(temp.c_str());
+
 	if (K == 1) {
 		C = new Aphorism;
 	}
@@ -109,9 +130,20 @@ Text* Text::inText(ifstream& ifst) {
 	else {
 		return 0;
 	}
-	ifst >> C->text;
+	getline(ifst, temp);
+	if (!temp.empty())
+		C->text = temp;
 	C->inData(ifst);
-	ifst >> C->mark;
+	getline(ifst, temp);
+	if (!temp.empty() && nums.find(temp) != -1) {
+		mark = atoi(temp.c_str());
+		if ((mark >= 0) && (mark <= 10))
+			C->mark = mark;
+	}
+	else {
+		cout << "Invalid input data!" << endl << endl;
+		exit(1);
+	}
 	return C;
 }
 
@@ -146,7 +178,24 @@ void Aphorism::setAuthor(string author)
 }
 
 void Aphorism::inData(ifstream& ifst) {
-	ifst >> author;
+	string temp;
+	bool flag = false;
+	getline(ifst, temp);
+	if (!temp.empty()) {
+		for (auto c : temp) {
+			if (!isalpha(c))
+			{
+				if (c != ' ' && c != '-' && c != ',' && c != '.')
+				{
+					cout << "[Aphorism] Invalid Data!" << endl << endl;
+					exit(1);
+				}
+			}
+		}
+		flag = true;
+	}
+	if (flag)
+		author = temp;
 }
 
 void Aphorism::outData(string text, int mark, ofstream& ofst) {
@@ -171,7 +220,24 @@ void Saying::setCountry(string country)
 }
 
 void Saying::inData(ifstream& ifst) {
-	ifst >> country;
+	string temp;
+	bool flag = false;
+	getline(ifst, temp);
+	if (!temp.empty()) {
+		for (auto c : temp) {
+			if (!isalpha(c))
+			{
+				if (c != ' ' && c != '-' && c != ',' && c != '.')
+				{
+					cout << "[Saying] Invalid Data!" << endl << endl;
+					exit(1);
+				}
+			}
+		}
+		flag = true;
+	}
+	if (flag)
+		country = temp;
 }
 
 void Saying::outData(string text, int mark, ofstream& ofst) {
@@ -199,7 +265,24 @@ void Riddle::setAnswer(string answer)
 }
 
 void Riddle::inData(ifstream& ifst) {
-	ifst >> answer;
+	string temp;
+	bool flag = false;
+	getline(ifst, temp);
+	if (!temp.empty()) {
+		for (auto c : temp) {
+			if (!isalpha(c))
+			{
+				if (c != ' ' && c != '-' && c != ',' && c != '.')
+				{
+					cout << "[Riddle] Invalid Data!" << endl << endl;
+					exit(1);
+				}
+			}
+		}
+		flag = true;
+	}
+	if (flag)
+		answer = temp;
 }
 
 void Riddle::outData(string text, int mark, ofstream& ofst) {
