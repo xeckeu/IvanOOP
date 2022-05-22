@@ -156,7 +156,7 @@ Text* Text::inText(ifstream& ifst) {
 }
 
 string Text::getText() {
-	return text;
+	return string (text);
 }
 
 int Text::textCounter(string text) {
@@ -182,7 +182,7 @@ string Aphorism::getAuthor()
 
 void Aphorism::setAuthor(string author)
 {
-	this->author = author;
+	this->author = string(author);
 }
 
 void Aphorism::inData(ifstream& ifst) {
@@ -215,7 +215,7 @@ void Aphorism::outData(string text, int mark, ofstream& ofst) {
 }
 
 void Aphorism::outFilter(string text, int mark, ofstream& ofst) {
-	ofst << "";
+	return;
 }
 
 string Saying::getCountry()
@@ -271,7 +271,7 @@ string Riddle::getAnswer()
 
 void Riddle::setAnswer(string answer)
 {
-	this->answer = answer;
+	this->answer =  string(answer);
 }
 
 void Riddle::inData(ifstream& ifst) {
@@ -304,5 +304,5 @@ void Riddle::outData(string text, int mark, ofstream& ofst) {
 }
 
 void Riddle::outFilter(string text, int mark, ofstream& ofst) {
-	ofst << "";
+	return;
 }

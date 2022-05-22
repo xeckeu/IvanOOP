@@ -8,7 +8,7 @@ using namespace std;
 
 
 class Text {
-    string text;
+private: string text;
     int mark;
 public:
     string getText();
